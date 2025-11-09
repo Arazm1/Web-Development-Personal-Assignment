@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="css/style-account-register.css">
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <ul id="navbar-ul">
+                <!--<li><a id="navbar-search"><input type="text" placeholder="Search.."></a></li>-->
+
+                <!--Logo - Redirects to index always-->
+                <li>
+                    <a href="index.html" class="navbar-logo-section">
+                        <img src="images/logos/website-logo.png" alt="The website logo" class="navbar-main-logo">
+                        <p class="navbar-main-logo-text">Da Bear</p>
+                    </a>
+                    
+
+                </li>
+
+                <li class="navbar-spacer"></li>
+
+
+                <li>
+                    <a href="map.html">
+                        <img src="images/icons/map-icon2.png" alt="Map icon" class="navbar-icon">
+                    </a>
+                </li>
+                <li>
+                    <button id="darkmode-button">
+                        <img src="images/icons/icon-darkmode.png" alt="Toggle dark/light mode" class="navbar-icon">
+                    </button>
+                </li>
+                <!--Possibly a model for Login instead of .html-->
+                <li><a id="hamburger-menu">&#9776;</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!--
+    Log in / register page:
+    Split screen design:
+    On the left: banner
+    On the right: Login/Signup
+    -->
+    <main>
+        <div id="account-page">
+        <!--LeftsideImage-->
+        <div id="account-page-banner">
+
+
+        </div>
+
+        <!--Register-->
+        <div class="account-auth-form">
+            
+
+            <form id="register-form">
+                <h2>Register</h2>
+
+                <!--
+                Step 1:
+                - Username
+                - Email
+                -->
+                <div class="form-step" id="fstep-1" >
+                    <label>Enter username</label>
+                    <input type="text" placeholder="Username" required />
+
+                    <label>Enter an email account</label>
+                    <input type="email" placeholder="account@email.com" required />
+
+                    <button type="submit">Next</button>
+
+    
+                </div>
+
+
+                <!--
+                Step 2:
+                - Password
+                -->
+                <div class="form-step" id="fstep-2" style="display: none;">
+                    <label>Enter password</label>
+                    <input type="password" placeholder="Enter your password" required />
+
+                    <label>Confirm password</label>
+                    <input type="password" placeholder="Confirm your password" required />
+
+                    <button type="submit">Next</button>
+                </div>
+
+
+                <!--
+                Step 3:
+                - Avatar
+                -->
+                <div class="form-step" id="fstep-3" style="display: none;">
+                    <label>Upload your avatar</label>
+                    <input type="file" id="avatar-input" placeholder="image/*" required />
+                    <img id="avatar-preview" src="" alt="Avatar Preview" style="display:none; width:100px; height:100px; border-radius:50%; margin-top:10px;">
+
+
+                    <button type="submit">Next</button>
+                </div>
+
+                
+
+
+                <div class="account-page-redirect">
+                        <p>Already have an account?</p>
+                        <a>Click here to Sign In</a>
+                    </div>
+                
+            </form>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    </main>
+    
+
+    
+</body>
+</html>

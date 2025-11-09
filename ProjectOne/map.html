@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script-map.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/style-map.css">
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+<body>
+
+
+</body>
+
+    <header>
+        <nav id="navbar">
+            <ul id="navbar-ul">
+                <!--<li><a id="navbar-search"><input type="text" placeholder="Search.."></a></li>-->
+
+                <!--Logo - Redirects to index always-->
+                <li>
+                    <a href="index.html" class="navbar-logo-section">
+                        <img src="images/logos/website-logo.png" alt="The website logo" class="navbar-main-logo">
+                        <p class="navbar-main-logo-text">Da Bear</p>
+                    </a>
+                    
+
+                </li>
+
+                <li class="navbar-spacer"></li>
+
+
+                <li>
+                    <a href="map.html">
+                        <img src="images/icons/map-icon2.png" alt="Map icon" class="navbar-icon">
+                    </a>
+                </li>
+                <li>
+                    <button id="darkmode-button">
+                        <img src="images/icons/icon-darkmode.png" alt="Toggle dark/light mode" class="navbar-icon">
+                    </button>
+                </li>
+                <!--Possibly a model for Login instead of .html-->
+                <li><a id="hamburger-menu">&#9776;</a></li>   
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="three-options-bar">
+            <button class="option-btn-active" data-target="map-section">Search by Map</button>
+            <button class="option-btn" data-target="daily-filter-section">Find Daily Menu</button>
+            <button class="option-btn" data-target="weekly-menu-section">Find Weekly Menu</button>
+        </div>
+
+
+
+
+        <!--Option 1: Search list and Map-->
+        <div class="option-content" id="map-section" >
+            <h1 id="map-page-main-title">Restaurants on Map</h1>
+            <div id="map-page-main-content">
+
+                <!--
+                Left side:
+                Search bar and below a list of all restaurants
+                -->
+                <div id="map-page-left-side">
+                    <div id="search-box">
+                        <input type="text" placeholder="Search..">
+                    </div>
+                    <div id="opt1-restaurants-list">
+                        <ul>
+                            <li>Restaurant 1</li>
+                            <li>Restaurant 2</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                            <li>Restaurant 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                Right side:
+                Map
+                -->
+                <div id="map"></div>
+            </div>
+        </div>
+
+
+        
+        <!--
+        Option 2: List of Restaurants and filter "box"
+        -->
+        <div class="option-content" id="daily-filter-section" style="display: none;">
+        
+        <!-- List of Restaurants -->
+            <div id="opt2-restaurants-container">
+                <h2>Restaurant List</h2>
+                <ul id="opt2-restaurant-list">
+                    <li>Restaurant A</li>
+                    <li>Restaurant B</li>
+                    <li>Restaurant C</li>
+                </ul>
+
+            </div>
+
+
+
+        
+            
+
+            <!--Filter menu on right-->
+            <div id="restaurant-filter-menu">
+                <h3>Filter Restaurants</h3>
+                <label for="filter-city">City</label>
+                <select id="filter-city">
+                    <option value="All">All Cities</option>
+                    <option value="Helsinki">Helsinki</option>
+                    <option value="Vantaa">Vantaa</option>
+                    <option value="Espoo">Espoo</option>
+                </select>
+
+                <label for="filter-provider">Provider:</label>
+                <select id="filter-provider">
+                    <option value="">All Providers</option>
+                    <option value="Provider A">Provider A</option>
+                    <option value="Provider B">Provider B</option>
+                </select>
+
+                <button id="apply-filters">Apply Filters</button>
+
+            </div>
+
+            
+            
+
+        </div>
+        
+
+    </main>
+
+
+    <footer>
+        <div class="footer-left-side">
+            <img src="images/logos/website-logo.png" alt="The website logo">
+            <span>© 2025 Name???</span>
+        </div>
+        <div class="footer-right-side">
+            <a>About Us</a>
+            <a>Contact Us</a>
+            <a>Privacy</a>
+        </div>
+    </footer>
+    
+    
+
+    
+</body>
+</html>

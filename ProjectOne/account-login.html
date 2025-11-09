@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" type="text/css" href="css/style-account-login.css">
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <ul id="navbar-ul">
+                <!--<li><a id="navbar-search"><input type="text" placeholder="Search.."></a></li>-->
+
+                <!--Logo - Redirects to index always-->
+                <li>
+                    <a href="index.html" class="navbar-logo-section">
+                        <img src="images/logos/website-logo.png" alt="The website logo" class="navbar-main-logo">
+                        <p class="navbar-main-logo-text">Da Bear</p>
+                    </a>
+                    
+
+                </li>
+
+                <li class="navbar-spacer"></li>
+
+
+                <li>
+                    <a href="map.html">
+                        <img src="images/icons/map-icon2.png" alt="Map icon" class="navbar-icon">
+                    </a>
+                </li>
+                <li>
+                    <button id="darkmode-button">
+                        <img src="images/icons/icon-darkmode.png" alt="Toggle dark/light mode" class="navbar-icon">
+                    </button>
+                </li>
+                <!--Possibly a model for Login instead of .html-->
+                <li><a id="hamburger-menu">&#9776;</a></li>   
+            </ul>
+        </nav>
+    </header>
+
+    <!--
+    Log in / register page:
+    Split screen design:
+    On the left: banner
+    On the right: Login/Signup
+    -->
+    <main>
+        <div id="account-page">
+        <!--LeftsideImage-->
+        <div id="account-page-banner">
+
+
+        </div>
+
+        <!--Login/Register-->
+        <div class="account-auth-form">
+            
+            <form>
+                <h2>Login</h2>
+                <label>Email / username</label>
+                <input type="email" placeholder="Enter your email" required />
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required />
+
+                <button type="submit">Login</button>
+
+                <div class="account-page-redirect">
+                    <p>Dont have an account?</p>
+                    <a>Sign up here!</a>
+                </div>
+                
+            </form>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    </main>
+    
+
+    
+</body>
+</html>
