@@ -62,6 +62,12 @@ Personal_Assignment/
 - `account-manager.html` — Account settings page.
 
 
+## Quick start
+1. Ensure you are either using Metropolia VPN or connected to Metropolia Network
+2. Run a local server e.g. use live server extension iin VS Code.
+
+
+
 
 
   
