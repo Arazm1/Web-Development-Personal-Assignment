@@ -129,6 +129,9 @@ header{
 
 
 /* <Main> */
+main{
+    background-color: #abb8c3;
+}
 /* Main Title, Main Image, Main text content under Main Image */
 .hidden{
     display: none !important;;
@@ -144,6 +147,8 @@ header{
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: white;
 }
 
 #map-view-section{
