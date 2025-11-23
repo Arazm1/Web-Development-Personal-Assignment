@@ -38,7 +38,7 @@ Personal_Assignment/
   - `style-map.css` — Styling for map/filter page.
   - `styles.css` — Styling for Index page.
  
-- `Images/` —:
+- `Images/` — Images displayed on application:
   - `banners/` — Styling for login page.
   - `icons/` — Styling for register page.
   - `logos/` — Styling for account settings page.
