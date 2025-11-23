@@ -63,7 +63,7 @@ Personal_Assignment/
 
 
 ## Quick start
-1. Ensure you are either using Metropolia VPN or connected to Metropolia Network
+1. Ensure you are either using the Metropolia VPN or connected to a Metropolia Network.
 2. Run a local server e.g. use live server extension iin VS Code.
 
 
