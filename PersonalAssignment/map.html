@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Restaurants</title>
+    <script src="js/script-map.js" defer type="module"></script>
+    <link rel="stylesheet" type="text/css" href="css/style-global.css">
+    <link rel="stylesheet" type="text/css" href="css/style-map.css">
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <ul id="navbar-ul">
+                <!--<li><a id="navbar-search"><input type="text" placeholder="Search.."></a></li>-->
+
+                <!--Logo - Redirects to index always-->
+                <li>
+                    <a href="index.html" class="navbar-logo-section">
+                        <img src="images/logos/website-logo.png" alt="The website logo" class="navbar-main-logo">
+                        <p class="navbar-main-logo-text">Da Bear</p>
+                    </a>
+                    
+
+                </li>
+
+                <li class="navbar-spacer"></li>
+
+
+                <li>
+                    <a href="map.html">
+                        <img src="images/icons/map-icon2.png" alt="Map icon" class="navbar-icon">
+                    </a>
+                </li>
+                <li>
+                    <button id="darkmode-button">
+                        <img src="images/icons/icon-darkmode.png" alt="Toggle dark/light mode" class="navbar-icon">
+                    </button>
+                </li>
+                <!--Possibly a model for Login instead of .html-->
+                <li><button id="hamburger-menu-btn">&#9776;</button></li>
+
+                <!-- Hamburger Menu Modal -->
+                <div id="hamburger-modal" class="hidden">
+                    <div id="hamburger-panel">
+
+                        <ul class="hamburger-elements">
+                            <!--
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="map.html">Map</a></li>
+                            -->
+                            <li><button id="hamburger-lang-btn">Language</button></li>
+                            <li><a href="map.html">Restaurants</a></li>
+                            <li id="h-login-option" class="hidden" ><a href="account-login.html">Login</a></li>
+                            <li id="h-register-option" class="hidden" ><a href="account-register.html">Register</a></li>
+                            <li id="h-account-settings" class="hidden" ><a href="account-manager.html">Account Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="three-options-bar">
+            <button id="map-view-button" class="option-btn-active" data-target="map-section">Search by Map</button>
+            <button id="filter-view-button" class="option-btn" data-target="daily-filter-section">Search by Filtering</button>
+        </div>
+
+
+
+
+        <!--Option 1: Search list and Map-->
+        <div id="map-view-section">
+            <div id="map-section" >
+                <h1 id="map-page-main-title">Restaurants on Map</h1>
+                <div id="map-page-main-content">
+
+                    <!--
+                    Left side:
+                    Search bar and below a list of all restaurants
+                    -->
+                    <div id="map-page-left-side">
+                        <div id="search-box">
+                            <input type="text" placeholder="Search..">
+                        </div>
+                        <div id="opt1-restaurants-list">
+                            <ul id="opt1-restaurants-ul">
+                            </ul>
+                        </div>
+                    </div>
+                    <!--
+                    Right side:
+                    Map
+                    -->
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <!-- Option 1 - Modal when clicking a restaurant -->
+            <div id="opt1-restaurant-modal" class="hidden">
+                <div class="modal-content">
+                    <button id="modal-close">&times;</button>
+
+                    <h2 id="opt1-modal-r-name"></h2>
+                    <p id="opt1-modal-r-address"></p>
+                    <p id="opt1-modal-r-city"></p>
+                    <p id="opt1-modal-r-phone"></p>
+                    <p id="opt1-modal-r-company"></p>
+                    <button id="opt1-set-fav-restaurant">Set as Favorite Restaurant</button>
+
+                    <div class="opt1-modal-buttons">
+                        <button id="opt1-modal-daily-btn">Show Daily Menu</button>
+                        <button id="opt1-modal-weekly-btn">Show Weekly Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <!--
+        Option 2: List of Restaurants and filter "box"
+        -->
+        <div id="daily-filter-section" class="hidden" >
+        
+        <!-- List of Restaurants -->
+            <div id="opt2-restaurants-container">
+                <h2>Restaurant List</h2>
+                <ul id="opt2-restaurant-ul">
+                </ul>
+
+            </div>
+
+            <!--Filter menu on right-->
+            <div id="restaurant-filter-menu">
+                <h3>Filter Restaurants</h3>
+                <label for="filter-daily-weekly">Daily Menu / Weekly Menu</label>
+                <div id="daily-weekly-buttons">
+                    <button class="daily-weekly-active">Daily Menu</button>
+                    <button class="daily-weekly-button">Weekly Menu</button>
+                </div>
+
+                <label for="filter-city">City</label>
+                <select id="filter-city">
+                    <!--
+                    <option value="All">All Cities</option>
+                    <option value="Helsinki">Helsinki</option>
+                    <option value="Vantaa">Vantaa</option>
+                    <option value="Espoo">Espoo</option>
+                    -->
+                    
+                </select>
+
+                <label for="filter-provider">Provider:</label>
+                <select id="filter-provider">
+                    <!--
+                    <option value="">All Providers</option>
+                    <option value="Provider A">Provider A</option>
+                    <option value="Provider B">Provider B</option>
+                    -->
+                </select>
+
+                <button id="apply-filters">Apply Filters</button>
+
+            </div>
+        </div>
+
+
+        <div id="restaurant-menu-modal" class="hidden">
+            <div id="restaurant-menu-content">
+                
+                <h2 id="restaurant-menu-modal-title">DailyMenu/WeeklyMenu</h2>
+                
+
+                <div id="restaurant-menu-scroll-wrapper">
+                    <div id="restaurant-menu-modal-body">
+                        <!--
+                        <p>Dish Name: PotatoSum</p>
+                        <p>Price: 2.85€</p>
+                        <p>Allergeenit</p>
+                        -->
+                    </div>
+                </div>
+                <button id="menu-modal-close-button">Close</button>
+            </div>
+        </div>
+        
+
+    </main>
+
+
+    <footer>
+        <div class="footer-left-side">
+            <img src="images/logos/website-logo.png" alt="The website logo">
+            <span>© 2025 Name???</span>
+        </div>
+        <div class="footer-right-side">
+            <a>About Us</a>
+            <a>Contact Us</a>
+            <a>Privacy</a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
