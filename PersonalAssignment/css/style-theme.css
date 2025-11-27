@@ -1,0 +1,157 @@
+/* Default - Light mode */
+:root {
+    --bg: #ffffff;
+    --bg-alt: #f4f4f4;
+    --text: #111111;
+    --text-light: #444444;
+    --accent: #ff7f50; 
+    --border: #cccccc;
+    --card-bg: #ffffff;
+
+
+    /* Common for all*/
+    --basic-light-color: #fff; /* Used in common sections*/
+
+    --body-background: #fdfaf8; /* Also main background*/
+    --header-background:
+    linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.98));
+    --navbar-logo-section: hsl(0, 0%, 98%);
+    --main-text-color: hsl(0, 0%, 28%);
+    --navbar-main-logo-text: #555;
+    --hamburger-text-color: hsl(0, 0%, 13%);
+    --hamburger-text-color-hover: #0077cc;
+
+    --hamburger-menu-button-hover: hsl(0, 0%, 88%);
+    --hamburger-menu-button-active: hsl(0, 0%, 83%);
+
+    --main-text: black;
+    --button-text: white;
+    --text-no-available: hsl(0, 0%, 25%);
+
+    --blue-button-main: hsl(211, 61%, 43%);
+    --blue-button-main-hover: hsl(213, 49%, 34%);
+    --green-button-main: hsl(134, 61%, 41%);
+    --green-button-main-hover: hsl(133, 61%, 33%);
+    --red-button-main: hsl(354, 70%, 54%);
+    --red-button-main-hover: hsl(354, 70%, 46%);
+    --gray-button-main: hsl(0, 2%, 37%);
+    --gray-button-main-hover: hsl(0, 2%, 32%);
+
+    --blue-active-button-main: hsl(211, 59%, 41%);
+    --blue-active-button-main-hover: hsl(211, 59%, 36%);
+    --white-button-main: hsl(0, 0%, 87%);
+    --white-button-main-hover: hsl(0, 0%, 82%);
+
+    --dark-blue-active-button-main: hsl(211, 61%, 23%);
+    --dark-blue-active-button-main-hover: hsl(213, 49%, 18%);
+
+    --border-color: #030303;
+
+    --footer-text: hsl(213, 66%, 14%);
+
+
+    /* Main + map */
+    --main-background-2: #abb8c3;
+
+    /* Main */
+    --fav-dish-text-section: azure;
+
+    /* Map page */
+    --map-page-list-background: hsl(0, 0%, 88%);
+    --map-list-border: #ccc;
+    --map-list-hover: #eee;
+
+    --map-page-item-container-title: hsl(211, 50%, 25%);
+    --map-page-item-background: hsl(211, 61%, 90%);
+
+    /* Account settings */
+    --accman-modal-border: #ccc;
+
+    /* Login / Register*/
+    --lr-body-bg: #abb8c3; /*Possibly old?*/
+    --lr-body-background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+
+    --lr-content-background: linear-gradient(rgba(159, 159, 159, 0.8), rgba(255, 255, 255, 0.8));
+    --lr-banner-shadow: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+
+    --l-form-background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    --l-border-color: #d1d5db;
+    --l-form-button: hsl(0, 0%, 50%);
+    --l-form-button-hover: hsl(0, 0%, 45%);
+
+    --r-content-background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+}
+
+/* Dark mode */
+.dark {
+    --basic-light-color: #1a1a1a;
+
+    --body-background: #111; 
+    --header-background:
+    linear-gradient(rgba(20, 20, 20, 1), rgba(20, 20, 20, 0.98));
+    --navbar-logo-section: #181818;
+
+    --main-text-color: hsl(0, 0%, 85%);
+    --navbar-main-logo-text: #ddd;
+    --hamburger-text-color: hsl(0, 0%, 92%);
+    --hamburger-text-color-hover: #66baff;
+
+    --hamburger-menu-button-hover: hsl(0, 0%, 22%);
+    --hamburger-menu-button-active: hsl(0, 0%, 27%);
+
+    --main-text: white;
+    --button-text: white;
+    --text-no-available: hsl(0, 0%, 65%);
+
+    --blue-button-main: hsl(211, 85%, 58%);
+    --blue-button-main-hover: hsl(211, 85%, 50%);
+    --green-button-main: hsl(134, 70%, 50%);
+    --green-button-main-hover: hsl(134, 70%, 42%);
+    --red-button-main: hsl(354, 70%, 60%);
+    --red-button-main-hover: hsl(354, 70%, 52%);
+    --gray-button-main: hsl(0, 0%, 55%);
+    --gray-button-main-hover: hsl(0, 0%, 48%);
+
+    --blue-active-button-main: hsl(211, 80%, 55%);
+    --blue-active-button-main-hover: hsl(211, 80%, 48%);
+    --white-button-main: hsl(0, 0%, 20%);
+    --white-button-main-hover: hsl(0, 0%, 25%);
+
+    --dark-blue-active-button-main: hsl(211, 70%, 35%);
+    --dark-blue-active-button-main-hover: hsl(211, 70%, 28%);
+
+    --border-color: #555;
+
+    --footer-text: hsl(213, 20%, 80%);
+
+    /* Main + map */
+    --main-background-2: #2a2f36;
+
+    /* Main */
+    --fav-dish-text-section: #2e4545;
+
+    /* Map page */
+    --map-page-list-background: hsl(0, 0%, 18%);
+    --map-list-border: #444;
+    --map-list-hover: hsl(0, 0%, 28%);
+
+    --map-page-item-container-title: hsl(211, 40%, 75%);
+    --map-page-item-background: hsl(211, 40%, 20%);
+
+    /* Account settings */
+    --accman-modal-border: #444;
+
+    /* Login / Register */
+    --lr-body-bg: #2a2f36;
+    --lr-body-background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+
+    --lr-content-background: linear-gradient(rgba(60, 60, 60, 0.6), rgba(20, 20, 20, 0.6));
+    --lr-banner-shadow: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+
+    --l-form-background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.9));
+    --l-border-color: #444;
+    --l-form-button: hsl(0, 0%, 55%);
+    --l-form-button-hover: hsl(0, 0%, 48%);
+
+    --r-content-background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.9));
+}

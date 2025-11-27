@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Restaurants</title>
+    <script src="js/script.js" defer type="module" ></script>
+    <link rel="stylesheet" href="css/style-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/style-global.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul id="navbar-ul">
+                <!--<li><a id="navbar-search"><input type="text" placeholder="Search.."></a></li>-->
+
+                <!--Logo - Redirects to index always-->
+                <li>
+                    <a href="index.html" class="navbar-logo-section">
+                        <img src="images/logos/website-logo.png" alt="The website logo" class="navbar-main-logo">
+                        <p class="navbar-main-logo-text">Da Bear Eats</p>
+                    </a>
+                    
+
+                </li>
+
+                <li class="navbar-spacer"></li>
+
+
+                <li>
+                    <a href="map.html">
+                        <img src="images/icons/map-icon2.png" alt="Map icon" class="navbar-icon">
+                    </a>
+                </li>
+                <li>
+                    <button id="darkmode-button">
+                        <img src="images/icons/icon-darkmode.png" alt="Toggle dark/light mode" class="navbar-icon">
+                    </button>
+                </li>
+                <!--Possibly a model for Login instead of .html-->
+                <li><button id="hamburger-menu-btn">&#9776;</button></li>
+
+                <!-- Hamburger Menu Modal -->
+                <div id="hamburger-modal" class="hidden">
+                    <div id="hamburger-panel">
+
+                        <ul class="hamburger-elements">
+                            <!--
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="map.html">Map</a></li>
+                            <li><button id="hamburger-lang-btn">Language</button></li>
+                            -->
+                            <li><a href="map.html">Restaurants</a></li>
+                            <li id="h-login-option" class="hidden" ><a href="account-login.html">Login</a></li>
+                            <li id="h-register-option" class="hidden" ><a href="account-register.html">Register</a></li>
+                            <li id="h-account-settings" class="hidden" ><a href="account-manager.html">Account Settings</a></li>
+                            <li id="h-logout-option" class="hidden" ><button>Logout</button></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Main Page: Main banner and text below
+             Potentially something welcoming
+             -->
+        <div id="main-title-img-content">
+            <div id="main-title-div">
+            <h1>Da Bear Eats!</h1>
+            </div>
+            <div id="main-img-div">
+                <img src="images/banners/MainPageImg.png" alt="Main image" />
+            </div>
+            <div id="main-title-img-content-text">
+                <h3>Welcome to the Da Bear Eats website!</h3>
+                <p>Discover the best places to eat around campuses in Finland.</p>
+                <p>All restaurants are rated, reviewed and recommended by students just like you.
+                    Whether you're craving a quick bite between classes or planning a dinner with friends, 
+                    we've got you covered.
+                </p>
+                <p>
+                    Explore menus, compare prices, and find your next go-to spot with ease. 
+                    New to the platform? Start by browsing our most popular restaurants below!
+                </p>
+            </div>
+        </div>
+
+        <!--
+        Main Page:
+        An image of user's favorite dish as well as some text
+        -->
+        <div id="fav-dish-section">
+            <div>
+                <img src="images/banners/TempMainPageUserFavImg.png" alt="Main image"/>
+            </div>
+            <div id="fav-dish-section-text-table">
+                <h2 id="fav-restaurant-title">
+                    Your Favorite Restaurant Awaits
+                </h2>
+                <p id="fav-restaurant-text">
+                    Curious what students love most? Sign in to personalize your feed and see recommendations tailored to your taste. 
+                    Once you select your favorite restaurant or dish, we'll highlight it here for quick access!
+                </p>
+            </div>
+        </div>
+
+
+        <!--
+        Main Page:
+        3 closest restaurants displayed.
+        TODO: A Map and redirect to map.html here?-->
+        <div id="closest-restaurants">
+            <div id="closest-restaurants-s">
+                <h2>Our recommended Restaurants to You</h2>
+                <p id="suggest-location">Turn on location to see the closest restaurants to you</p>
+                <div id="closest-restaurants-container">
+                    <div class="closest-restaurant-card">
+                        <img src="images/banners/closestRestaurant1.png" alt="Main image"/>
+                        <h3>Metropolia Myllypuro</h2>
+                        <p>13.20 km from Helsinki</p>
+                    </div>
+                    <div class="closest-restaurant-card">
+                        <img src="images/banners/closestRestaurant2.png" alt="Main image"/>
+                        <h3>Metropolia Karamalmi</h2>
+                        <p>15.51 km from Helsinki</p>
+                    </div>
+                    <div class="closest-restaurant-card">
+                        <img src="images/banners/closestRestaurant3.png" alt="Main image"/>
+                        <h3>Metropolia Myyrmäki</h2>
+                        <p>12.95 km from Helsinki</p>
+                    </div>
+                </div>
+                <div id="closest-restaurants-show-map">
+                    <button id="main-page-to-map-button">View all nearby on the map</button>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="footer-left-side">
+            <img src="images/logos/website-logo.png" alt="The website logo">
+            <span>© 2025 Da Bear Eats</span>
+        </div>
+        <div class="footer-right-side">
+            <a>About Us</a>
+            <a>Contact Us</a>
+            <a>Privacy</a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/style-global.css">
+    <link rel="stylesheet" type="text/css" href="css/style-account-register.css">
+    <script src="./js/script-register.js" defer type="module"></script>
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <ul id="navbar-ul">
+                <!--<li><a id="navbar-search"><input type="text" placeholder="Search.."></a></li>-->
+
+                <!--Logo - Redirects to index always-->
+                <li>
+                    <a href="index.html" class="navbar-logo-section">
+                        <img src="images/logos/website-logo.png" alt="The website logo" class="navbar-main-logo">
+                        <p class="navbar-main-logo-text">Da Bear Eats</p>
+                    </a>
+                    
+
+                </li>
+
+                <li class="navbar-spacer"></li>
+
+
+                <li>
+                    <a href="map.html">
+                        <img src="images/icons/map-icon2.png" alt="Map icon" class="navbar-icon">
+                    </a>
+                </li>
+                <li>
+                    <button id="darkmode-button">
+                        <img src="images/icons/icon-darkmode.png" alt="Toggle dark/light mode" class="navbar-icon">
+                    </button>
+                </li>
+                <!--Possibly a model for Login instead of .html-->
+                <li><button id="hamburger-menu-btn">&#9776;</button></li>
+
+                <!-- Hamburger Menu Modal -->
+                <div id="hamburger-modal" class="hidden">
+                    <div id="hamburger-panel">
+
+                        <ul class="hamburger-elements">
+                            <!--
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="map.html">Map</a></li>
+                            <li><button id="hamburger-lang-btn">Language</button></li>
+                            -->
+                            <li><a href="map.html">Restaurants</a></li>
+                            <li id="h-login-option" class="hidden" ><a href="account-login.html">Login</a></li>
+                            <li id="h-register-option" class="hidden" ><a href="account-register.html">Register</a></li>
+                            <li id="h-account-settings" class="hidden" ><a href="account-manager.html">Account Settings</a></li>
+                            <li id="h-logout-option" class="hidden" ><button>Logout</button></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!--
+    Log in / register page:
+    Split screen design:
+    On the left: banner
+    On the right: Login/Signup
+    -->
+    <main>
+        <div id="account-page">
+        <!--LeftsideImage-->
+        <div id="account-page-banner">
+
+
+        </div>
+
+        <!--Register-->
+        <div class="account-auth-form">
+            
+
+            <form id="register-form">
+                <h2>Register</h2>
+
+                <!--
+                Step 1:
+                - Username
+                - Email
+                -->
+                <div class="form-step" id="fstep-1" >
+                    <label>Enter username</label>
+                    <input id="register-username" name="username" type="text" required />
+
+                    <label>Enter an email account</label>
+                    <input id="register-email" name="email" type="email" required />
+
+                    <button type="button" id="step1-next">Next</button>
+
+    
+                </div>
+
+
+                <!--
+                Step 2:
+                - Password
+                -->
+                <div class="form-step" id="fstep-2" style="display: none;">
+                    <label>Enter password</label>
+                    <input id="register-password" name="password" type="password" required />
+
+                    <label>Confirm password</label>
+                    <input id="register-password2" name="password2" type="password" required />
+
+                    <button type="button" id="step2-next">Next</button>
+                </div>
+
+
+                <!--
+                Step 3:
+                - Avatar
+                -->
+                <div class="form-step" id="fstep-3" style="display: none;">
+                    <label>Upload your avatar</label>
+                    <input type="file" id="avatar-input" placeholder="image/*" name="avatar" required  />
+                    <img id="avatar-preview" src="" alt="Avatar Preview" style="display:none; width:100px; height:100px; border-radius:50%; margin-top:10px;">
+
+
+                    <button type="button" id="step3-next">Next</button>
+                </div>
+
+                
+
+
+                <div class="account-page-redirect">
+                        <p>Already have an account?</p>
+                        <a href="account-login.html">Click here to Sign In</a>
+                    </div>
+                
+            </form>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    </main>
+    
+
+    
+</body>
+</html>

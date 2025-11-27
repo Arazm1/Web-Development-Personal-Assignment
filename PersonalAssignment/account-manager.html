@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Manager</title>
+    <link rel="stylesheet" href="css/style-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/style-global.css">
+    <link rel="stylesheet" type="text/css" href="css/style-account-manager.css">
+    <script src="./js/script-accman.js" defer type="module"></script>
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <ul id="navbar-ul">
+                <!--<li><a id="navbar-search"><input type="text" placeholder="Search.."></a></li>-->
+
+                <!--Logo - Redirects to index always-->
+                <li>
+                    <a href="index.html" class="navbar-logo-section">
+                        <img src="images/logos/website-logo.png" alt="The website logo" class="navbar-main-logo">
+                        <p class="navbar-main-logo-text">Da Bear Eats</p>
+                    </a>
+                    
+
+                </li>
+
+                <li class="navbar-spacer"></li>
+
+
+                <li>
+                    <a href="map.html">
+                        <img src="images/icons/map-icon2.png" alt="Map icon" class="navbar-icon">
+                    </a>
+                </li>
+                <li>
+                    <button id="darkmode-button">
+                        <img src="images/icons/icon-darkmode.png" alt="Toggle dark/light mode" class="navbar-icon">
+                    </button>
+                </li>
+                <!--Possibly a model for Login instead of .html-->
+                <li><button id="hamburger-menu-btn">&#9776;</button></li>
+
+                <!-- Hamburger Menu Modal -->
+                <div id="hamburger-modal" class="hidden">
+                    <div id="hamburger-panel">
+
+                        <ul class="hamburger-elements">
+                            <!--
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="map.html">Map</a></li>
+                            <li><button id="hamburger-lang-btn">Language</button></li>
+                            -->
+                            <li><a href="map.html">Restaurants</a></li>
+                            <li id="h-login-option" class="hidden" ><a href="account-login.html">Login</a></li>
+                            <li id="h-register-option" class="hidden" ><a href="account-register.html">Register</a></li>
+                            <li id="h-account-settings" class="hidden" ><a href="account-manager.html">Account Settings</a></li>
+                            <li id="h-logout-option" class="hidden" ><button>Logout</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!--
+    Account Manager
+    -->
+    <main>
+        
+
+        <div id="account-info">
+            <h2>Your account</h2>
+
+            <img id="account-info-avatar" alt="Avatar" src="images/other/default-account-avatar.png" />
+            <p id="account-info-name"></p>
+            <p id="account-info-email"></p>
+            <p id="account-info-favorite-restaurant"></p>
+
+            <button id="account-edit-button">Modify Account</button>
+            <button id="change-avatar-button">Change Avatar</button>
+            <button id="account-delete-button">Delete Account</button>
+        </div>
+
+
+        <div id="account-edit-modal" class="hidden">
+            <div id="modal-edit">
+                <h3>Edit Account</h3>
+                <form id="account-edit-form">
+
+                    <label>New Username</label>
+                    <input type="text" id="edit-username">
+
+                    <label>New Email</label>
+                    <input type="email" id="edit-email">
+
+                    <label>New Password</label>
+                    <input type="password" id="edit-password">
+
+                    <!--
+                    <label>New Favourite Restaurant</label>
+                    <select id="edit-fav-restaurant"></select>
+                    -->
+                    
+
+                    <button type="button" id="account-save-edit">Save Changes</button>
+                    <button type="button" id="account-cancel-edit">Cancel Changes</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="avatar-edit-modal" class="hidden">
+            <div id="avatar-edit-modal-content">
+                <h3>Update Avatar</h3>
+
+                <img id="avatar-preview" alt="Avatar"/>
+
+                <form id="avatar-upload-form">
+                    <input type="file" id="avatar-file" accept="image/*">
+
+                    <button type="submit" id="avatar-save-edit">Save Changes</button>
+                    <button type="button" id="avatar-cancel-edit">Cancel Changes</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div id="account-delete-modal" class="hidden" >
+            <div id="account-delete-modal-content">
+                <h3>Delete Account</h3>
+                <p>Are you sure you want to delete your account?</p>
+
+                <div class="delete-modal-buttons">
+                    <button id="account-delete-confirm-button">Confirm Delete</button>
+                    <button id="account-delete-cancel-button">Cancel Delete</button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    <footer>
+        <div class="footer-left-side">
+            <img src="images/logos/website-logo.png" alt="The website logo">
+            <span>© 2025 Da Bear Eats</span>
+        </div>
+        <div class="footer-right-side">
+            <a>About Us</a>
+            <a>Contact Us</a>
+            <a>Privacy</a>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    
+</body>
+</html>

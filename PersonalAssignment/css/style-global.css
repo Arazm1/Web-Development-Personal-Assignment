@@ -1,0 +1,301 @@
+*{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: visible;
+}
+
+body{
+    width: auto;
+    text-decoration: none;
+    background-color: var(--body-background);
+    color: var(--main-text);
+
+    border-radius: 16px;
+    /*background-color: #555;*/
+
+}
+
+
+
+
+
+/* <Header> */
+header{
+    /*background-color: hsl(207, 17%, 62%);*/
+    /*background: 
+    linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.98));*/
+    background: var(--header-background);
+    position: sticky;
+    top: 0;
+    padding: 4px 12px;
+    z-index: 10;
+    border-bottom: 0.80px solid #a1a1a1;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Shadow below navbar */
+    border-radius: 0 0 16px 16px;
+}
+
+
+#navbar ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0rem;
+}
+
+#navbar li{
+    padding-right: 1rem;
+      
+}
+
+
+#navbar a{
+    cursor: pointer;
+}
+
+#navbar a:hover{
+    /*transform: scale(1.1);*/
+}
+
+.navbar-logo-section{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.navbar-logo-section:hover{
+    background-color: var(--navbar-logo-section);
+    border-radius: 16px;
+}
+
+
+
+.navbar-main-logo{
+    height: 48px;
+    width: auto;
+    border-radius: 40px;
+    vertical-align: middle;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar-main-logo:hover {
+  opacity: 0.9;
+  transform: none;
+}
+
+.navbar-main-logo-text{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--navbar-main-logo-text);
+    font-family: 'Brush Script MT', cursive;
+}
+
+.navbar-main-logo-text:hover{
+    font-size: 1.4rem;
+    font-weight: 1000;
+    color: var(--navbar-main-logo-text);
+    
+}
+
+.navbar-spacer{
+    flex-grow: 1;
+}
+
+.navbar-icon{
+    background: none;
+    width: auto;
+    height: 28px;
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+}
+
+.navbar-icon:hover{
+    transform: scale(1.2);
+}
+
+#darkmode-button{
+    background: none;        /* removes white background */
+    border: none;            /* removes border */
+    cursor: pointer;         /* adds pointer cursor */
+    padding: 0;              /* removes default padding */
+    margin: 0;
+    display: flex;           /* allows icon centering */
+    align-items: center;
+}
+
+
+/* --Hamburger Menu-- */
+#hamburger-menu-btn{
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#hamburger-menu-btn:hover{
+    border-radius: 5px;
+    background: var(--hamburger-menu-button-hover);
+}
+
+#hamburger-menu-btn.active{
+    border-radius: 5px;
+    background: var(--hamburger-menu-button-active);
+
+}
+
+#hamburger-modal{
+    position: fixed;
+    inset: 0;
+    background: transparent; /* no dark overlay */
+    pointer-events: none; /* prevents blocking */
+    z-index: 9999;
+}
+
+#hamburger-modal.show #hamburger-panel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden{
+    display: none;
+}
+
+#hamburger-panel{
+    position: absolute;
+    top: 60px;       /* adjust depending on navbar height */
+    right: 10px;
+
+    background: var(--basic-light-color);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+
+    width: 220px;
+    pointer-events: auto;
+    opacity: 0;
+}
+
+.hamburger-elements {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hamburger-elements a,
+.hamburger-elements button {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--hamburger-text-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 5px 0;
+}
+
+.hamburger-elements a:hover,
+.hamburger-elements button:hover {
+    color: var(--hamburger-text-color-hover);
+}
+
+.h-login-option.hidden{
+    display: none;
+}
+
+.h-register-option.hidden{
+    display: none;
+}
+.h-account-settings.hidden{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <footer> */
+/*
+footer{
+    background-color: hsl(0, 0%, 26%);
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 10;
+    border-bottom: 0.80px solid #a1a1a1;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Shadow below navbar */
+/*
+}
+
+#navbar-bottom{
+
+}*/
+
+footer{
+    background-color: var(--body-background);
+    color: var(--main-text-color);
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    border-radius: 0px 0px 0 0;
+    border-color: var(--border-color);
+}
+
+.footer-left-side{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.footer-left-side img{
+    height: 60px;
+    width: auto;
+    border-radius: 16px 16px 16px 16px;
+}
+
+.footer-right-side{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.15rem;
+}
+
+.footer-right-side a{
+    color: var(--footer-text);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.footer-right-side a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

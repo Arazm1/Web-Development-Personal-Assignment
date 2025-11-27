@@ -1,0 +1,287 @@
+main {
+    position: relative;
+    min-height: 100vh;
+}
+
+body{
+    background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+        url('../images/banners/account-manager-background.png') center/cover no-repeat;
+}
+
+
+
+#account-info{
+    max-width: 550px;
+    margin: 4rem auto;
+    background: var(--basic-light-color);
+    padding: 1.5rem;
+    /*box-shadow: 0 3px 10px rgba(0,0,0,0.1);*/
+    border-radius: 12px;
+}
+
+#account-info-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accman-modal-border);
+    margin-bottom: 1rem;
+}
+
+#account-info p {
+    background-color: var(--body-background);
+    padding: 10px 14px;
+    margin: 8px 0;
+    border-radius: 8px;
+    /*box-shadow: 0 1px 3px rgba(0,0,0,0.1);*/
+    font-size: 1rem;
+    color: var(--main-text-color);
+}
+
+
+main button{
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    color: var(--button-text);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#account-edit-button{
+    background-color: var(--green-button-main);
+
+}
+
+#account-edit-button:hover{
+    background-color: var(--green-button-main-hover);
+}
+
+#change-avatar-button{
+    background-color: var(--blue-button-main);
+}
+
+#change-avatar-button:hover{
+    background-color: var(--blue-button-main-hover);
+}
+
+#account-delete-button{
+    background-color: var(--red-button-main);
+}
+
+#account-delete-button:hover{
+    background-color: var(--red-button-main-hover);
+}
+
+
+
+
+
+
+/* --Account Edit Modal--*/
+#account-edit-modal.hidden{
+    display: none;   
+}
+
+#account-edit-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    z-index: 20000;
+}
+
+#modal-edit {
+    background: var(--body-background);
+    border: 1px solid hsl(0, 0%, 2%);
+    padding: 2rem;
+    width: 400px;
+    border-radius: 12px;
+    /*box-shadow: 0 3px 15px rgba(0,0,0,0.2);*/
+}
+
+#account-edit-form label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+#account-edit-form input,
+#account-edit-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid var(--accman-modal-border);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#account-save-edit{
+    background-color: var(--blue-button-main);
+}
+
+#account-save-edit:hover{
+    background-color: var(--blue-button-main-hover);
+}
+
+#account-cancel-edit{
+    background-color: var(--gray-button-main);
+}
+
+#account-cancel-edit:hover{
+    background-color: var(--gray-button-main-hover);
+}
+
+
+
+
+/*---Avatar Edit Modal---*/
+#avatar-edit-modal.hidden{
+    display: none;
+}
+
+#avatar-edit-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    z-index: 20000;
+}
+
+#avatar-edit-modal-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background: var(--body-background);
+    padding: 2rem;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+#avatar-edit-modal-content h3{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+#avatar-preview {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accman-modal-border);
+    margin-bottom: 15px;
+}
+
+#avatar-file{
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+#avatar-upload-form button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#avatar-save-edit{
+    background-color: var(--green-button-main);
+}
+
+#avatar-save-edit:hover{
+    background-color: var(--green-button-main-hover);
+}
+
+#avatar-cancel-edit{
+    background-color: var(--red-button-main);
+}
+
+#avatar-cancel-edit:hover{
+    background-color: var(--red-button-main-hover);
+}
+
+
+
+
+
+
+
+/*---Account delete Modal---*/
+#account-delete-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 30000;
+
+}
+
+#account-delete-modal.hidden {
+    display: none;
+}
+
+#account-delete-modal-content{
+    background-color: var(--body-background);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+}
+
+#account-delete-modal-content h3{
+    margin-bottom: 1rem;
+}
+
+#account-delete-modal-content p{
+    margin-bottom: 1rem;
+}
+
+.delete-modal-buttons{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#account-delete-confirm-button{
+    background-color: var(--red-button-main);
+    color: var(--basic-light-color);
+}
+
+#account-delete-confirm-button:hover{
+    background-color: var(--red-button-main-hover);
+}
+
+#account-delete-cancel-button{
+    background-color: var(--gray-button-main);
+    color: var(--basic-light-color);
+}
+
+#account-delete-cancel-button:hover{
+    background-color: var(--gray-button-main-hover);
+}
+
